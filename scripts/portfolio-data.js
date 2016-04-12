@@ -1,4 +1,4 @@
-var portfolio = [
+var projectData = [
   {
     'title':        'Can I Recycle?',
     'url':          'http://www.trishthedish.github.io',
