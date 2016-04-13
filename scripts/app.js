@@ -13,7 +13,9 @@ function Project (x) {
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
   $newProject.find('h3').text(this.title);
-  $newProject.find('img').attr('scr', this.screenshot);
+  $newProject.find('h4').text(this.pubDate);
+  $newProject.find('img').attr('src', this.screenshot);
+  $newProject.find('p').html(this.description);
   $newProject.removeClass('template');
 
   return $newProject;
@@ -21,6 +23,10 @@ Project.prototype.toHtml = function() {
 
 projectData.forEach(function(x) {
   projects.push(new Project(x));
+});
+
+projects.sort(function(a,b) {
+  return (new Date(b.pubDate)) - (new Date(a.pubDate));
 });
 
 projects.forEach(function(x) {
