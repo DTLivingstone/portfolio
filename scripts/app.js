@@ -13,9 +13,10 @@ function Project (x) {
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
   $newProject.find('h3').text(this.title);
-  $newProject.find('h4').text(this.pubDate);
+  $newProject.find('#date').text(this.pubDate);
+  $newProject.find('#days').text(parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000));
   $newProject.find('img').attr('src', this.screenshot);
-  $newProject.find('p').html(this.description);
+  $newProject.find('p').text(this.description);
   $newProject.removeClass('template');
 
   return $newProject;
