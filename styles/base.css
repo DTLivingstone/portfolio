@@ -1,4 +1,14 @@
 body {
   background-color: #989898;
-  margin: 0 4em 0 4em;
+  margin: 0 4rem 0 4rem;
+  font-size:
+}
+
+a {
+  color: #004489;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }

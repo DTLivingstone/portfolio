@@ -2,12 +2,19 @@
   display: none;
 }
 
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
 article {
   background-color: #d3d9df;
   padding: 2rem;
   margin-bottom: 1.5rem;
-}
-
-img {
-  max-width: 50rem;
 }
