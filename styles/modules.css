@@ -2,19 +2,47 @@
   display: none;
 }
 
+header {
+  display: block;
+  height: 37px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+#main-nav {
+  position: absolute;
+  width: 170px;
+  top: 52px;
+  right: -15px;
+  background-color: #fff;
+}
+
+#logo {
+  font-size: 24px;
+}
+
+#nav-button {
+  float: right;
+  font-size: 24px;
+  margin-top: 3px;
+}
+
 nav ul {
   list-style: none;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  padding-right: 1rem;
-  font-size: 1.5rem;
+  padding: 8px;
+  font-size: 20px;
 }
 
 article {
   background-color: #d3d9df;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
+}
+
+article p {
+  padding: 16px;
 }
