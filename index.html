@@ -1,26 +1,32 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>David Livingstone's Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/styles/normalize.css"></link>
     <link rel="stylesheet" href="styles/base.css"></link>
     <link rel="stylesheet" href="styles/layout.css"></link>
     <link rel="stylesheet" href="styles/modules.css"></link>
+    <link rel='stylesheet' href='bower_components/typicons.font/src/font/typicons.css'></link>
   </head>
   <body>
-    <h1 id="logo">David Livingtone</h1>
-    <nav>
-      <ul>
-        <li class="tab-button" data-content="projects"><a href="#">Projects</a></li>
-        <li class="tab-button" data-content="about"><a href="#">About</a></li>
-        <li><a href="david@david.tl">Email</a></li>
-        <li><a href="twitter.com/livingstone86">Twitter</a></li>
-        <li><a href="github.com/DTLivingstone">GitHub</a></li>
-      </ul>
-    </nav>
-    <h2>Web Development</h2>
+
+    <header>
+      <span id="logo">David Livingstone</span>
+      <span id="menu-button" class="typcn typcn-th-menu"></span>
+      <nav id="main-nav">
+        <ul>
+          <li class="tab-button" data-content="projects"><a class="typcn typcn-briefcase" href="#" >Projects</a></li>
+          <li class="tab-button" data-content="about"><a class="typcn typcn-user" href="#">About</a></li>
+          <li><a class="typcn typcn-mail" href="david@david.tl">Email</a></li>
+          <li><a class="typcn typcn-social-twitter" href="twitter.com/livingstone86">Twitter</a></li>
+          <li><a class="typcn typcn-social-github" href="github.com/DTLivingstone">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <section class="tab-content" id="projects">
+      <h2>Web Development</h2>
       <article class="template">
         <h3>Title</h3>
         <h4>Published on <span id="date">date</span>, <span id="days"></span> days ago</h4>
@@ -28,12 +34,14 @@
         <p>Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </article>
     </section>
+
     <section class="tab-content" id="about">
+      <h2>About Me</h2>
       <article>
-        <h3>About Me</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </article>
     </section>
+
     <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
     <script src="scripts/portfolio-data.js"></script>
     <script src="scripts/app.js"></script>

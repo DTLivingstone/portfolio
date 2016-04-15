@@ -2,6 +2,18 @@
   display: none;
 }
 
+header {
+  display: inline;
+}
+
+#main-nav {
+  /*display: none;*/
+}
+
+#logo {
+  font-size: 2rem;
+}
+
 nav ul {
   list-style: none;
   padding-left: 0;
@@ -17,4 +29,8 @@ article {
   background-color: #d3d9df;
   padding: 2rem;
   margin-bottom: 1.5rem;
+}
+
+#menu-button {
+  float: right;
 }
