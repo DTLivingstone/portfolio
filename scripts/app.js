@@ -14,8 +14,8 @@ function Project(opts) {
 
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
-  $newProject.data('category', this.category); //not working
-  $newProject.data('year', this.year); //not working
+  $newProject.attr('data-category', this.category); //not working
+  $newProject.attr('data-year', this.year); //not working
   $newProject.find('h3').text(this.title);
   $newProject.find('#date').text(this.pubDate);
   $newProject.find('#days').text(parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000));

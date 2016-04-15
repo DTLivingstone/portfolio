@@ -1,7 +1,7 @@
 @media screen and (min-width: 768px) {
 
   article {
-    margin: 0 40px 0 40px;
+    margin: 0 40px;
   }
 
   #main-nav {
@@ -25,6 +25,6 @@
 @media screen and (min-width: 1024px) {
 
   article {
-    margin: 0 80px 0 80px;
+    margin: 0 80px;
   }
 }
