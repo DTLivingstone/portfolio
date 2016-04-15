@@ -10,6 +10,13 @@ appView.handleMainNav = function() {
   $('nav .tab-button:first').click();
 };
 
+appView.handleNavButton = function() {
+  $('#nav-button').on('click', function() {
+    $('#main-nav').toggle();
+  });
+};
+
 $(document).ready(function() {
   appView.handleMainNav();
+  appView.handleNavButton();
 });

@@ -3,34 +3,43 @@
 }
 
 header {
-  display: inline;
+  display: block;
+  height: 37px;
+  padding: .5rem;
+  background-color: #fff;
 }
 
 #main-nav {
-  /*display: none;*/
+  position: absolute;
+  width: 170px;
+  top: 52px;
+  right: -15px;
+  background-color: #fff;
 }
 
 #logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+#nav-button {
+  float: right;
+  font-size: 1.8rem;
+  margin-top: .1rem;
 }
 
 nav ul {
   list-style: none;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  padding-right: 1rem;
+  padding: 8px;
   font-size: 1.5rem;
 }
 
 article {
   background-color: #d3d9df;
-  padding: 2rem;
+  /*padding: 2rem;*/
   margin-bottom: 1.5rem;
-}
-
-#menu-button {
-  float: right;
 }
