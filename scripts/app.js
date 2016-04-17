@@ -9,20 +9,16 @@ function Project(opts) {
   this.description = opts.description;
   this.pubDate = opts.pubDate;
   this.category = opts.category;
-  this.year = opts.pubDate.slice(0,4);
 };
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.attr('data-category', this.category); //not working
-  $newProject.attr('data-year', this.year); //not working
-  $newProject.find('h3').text(this.title);
-  $newProject.find('#date').text(this.pubDate);
-  $newProject.find('#days').text(parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000));
-  $newProject.find('img').attr('src', this.screenshot);
-  $newProject.find('p').text(this.description);
-  $newProject.removeClass('template');
-  return $newProject;
+  this.year = this.pubDate.slice(0,4);
+  this.date = this.pubDate;
+  this.daysAgo = parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000);
+
+
+  var template = Handlebars.compile($('#project-template').html());
+  return template(this);
 };
 
 projectData.forEach(function(obj) {
