@@ -18,16 +18,13 @@ appView.handleNavButton = function() {
 
 appView.populateFilters = function() {
   $('article').each(function() {
-    console.log(this);
     if (!$(this).hasClass('template')) {
       var category = $(this).attr('data-category');
       if ($('#category-filter option[value ="' + category + '"]').length === 0) {
-        console.log(category);
         $('#category-filter').append('<option value="' + category + '">' + category + '</option>');
       }
       var year = $(this).attr('data-year');
       if (($('#year-filter option[value = "' + year + '"]').length === 0)) {
-        console.log(year);
         $('#year-filter').append('<option value="' + year + '">' + year + '</option>');
       }
     }

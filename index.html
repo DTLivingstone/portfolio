@@ -9,52 +9,53 @@
     <link rel="stylesheet" href="styles/modules.css"></link>
     <link rel="stylesheet" href="styles/state.css"></link>
     <link rel="stylesheet" href="bower_components/typicons.font/src/font/typicons.css"></link>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300' rel='stylesheet' type='text/css'>
+    <script id="project-template" type="text/x-handlebars-template">
+      <article data-category="{{category}}" data-year="{{year}}">
+        <h3>{{title}}</h3>
+        <h4>Published on {{pubDate}}, {{daysAgo}} days ago</h4>
+        <img src="{{screenshot}}"></img>
+        <p>{{description}}</p>
+      </article>
+    </script>
   </head>
   <body>
-
     <header>
       <span id="logo">David Livingstone</span>
       <span id="nav-button" class="typcn typcn-th-menu"></span>
+      <div class="clear"></div>
+      <nav id="main-nav">
+        <ul>
+          <li class="tab-button" data-content="projects"><a class="typcn typcn-briefcase" href="#" >Projects</a></li>
+          <li class="tab-button" data-content="about"><a class="typcn typcn-user" href="#">About</a></li>
+          <li><a class="typcn typcn-mail" href="mailto:david@david.tl">Email</a></li>
+          <li><a class="typcn typcn-social-twitter" href="http://twitter.com/livingstone86">Twitter</a></li>
+          <li><a class="typcn typcn-social-github" href="http://github.com/DTLivingstone">GitHub</a></li>
+        </ul>
+      </nav>
     </header>
-
-    <nav id="main-nav">
-      <ul>
-        <li class="tab-button" data-content="projects"><a class="typcn typcn-briefcase" href="#" >Projects</a></li>
-        <li class="tab-button" data-content="about"><a class="typcn typcn-user" href="#">About</a></li>
-        <li><a class="typcn typcn-mail" href="mailto:david@david.tl">Email</a></li>
-        <li><a class="typcn typcn-social-twitter" href="http://twitter.com/livingstone86">Twitter</a></li>
-        <li><a class="typcn typcn-social-github" href="http://github.com/DTLivingstone">GitHub</a></li>
-      </ul>
-    </nav>
-
-    <section class="tab-content" id="projects">
-
-      <div id="project-filters">
-        <select id="category-filter">
-          <option value="">Filter by Category</option>
-        </select>
-        <select id="year-filter">
-          <option value="">Filter by Year</option>
-        </select>
-      </div>
-
-      <h2>Web Development</h2>
-      <article class="template" data-category="" data-year="">
-        <h3>Title</h3>
-        <h4>Published on <span id="date">date</span>, <span id="days"></span> days ago</h4>
-        <img src="assets/img/card.png"></img>
-        <p>Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-    </section>
-
-    <section class="tab-content" id="about">
-      <h2>About Me</h2>
-      <div>
-        <p>Retired data janitor. Went to journalism school to write, re-write, clean up, and edit stories. Now he’s at Codefellows to write, re-write, clean up, and edit code. Half-marathon runner. Enjoys raiding the snack isle at the Asian market and taking long baths.</p>
-      </div>
-    </section>
-
+    <main>
+      <section class="tab-content" id="projects">
+        <h2>Web Development</h2>
+        <div id="project-filters">
+          <select id="category-filter">
+            <option value="">Filter by Category</option>
+          </select>
+          <select id="year-filter">
+            <option value="">Filter by Year</option>
+          </select>
+        </div>
+      </section>
+      <section class="tab-content" id="about">
+        <h2>About Me</h2>
+        <div>
+          <img id="headshot" src="assets/img/headshot.jpg"></img>
+          <p>Retired data janitor. Went to journalism school to write, re-write, clean up, and edit stories. Now he’s at Codefellows to write, re-write, clean up, and edit code. Half-marathon runner. Enjoys raiding the snack isle at the Asian market and taking long baths.</p>
+        </div>
+      </section>
+    </main>
     <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="scripts/portfolio-data.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/appView.js"></script>

@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: gray;
+}
+
 img {
   max-width: 100%;
 }
