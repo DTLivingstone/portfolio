@@ -9,14 +9,14 @@ function Project(opts) {
   this.description = opts.description;
   this.pubDate = opts.pubDate;
   this.category = opts.category;
+  // for (key in opts) {
+  //   this[key] = opts[key];
+  // };
 };
 
 Project.prototype.toHtml = function() {
   this.year = this.pubDate.slice(0,4);
-  this.date = this.pubDate;
   this.daysAgo = parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000);
-
-
   var template = Handlebars.compile($('#project-template').html());
   return template(this);
 };

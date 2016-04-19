@@ -2,23 +2,15 @@
   display: none;
 }
 
-header {
-  display: block;
-  height: 37px;
-  padding: 8px;
-  background-color: #fff;
+.clear {
+  clear: both;
 }
 
 #main-nav {
-  position: absolute;
-  width: 170px;
-  top: 52px;
-  right: -15px;
+  float: right;
+  padding: 0 10px;
+  margin: 5px -8px 0 0;
   background-color: #fff;
-}
-
-#logo {
-  font-size: 24px;
 }
 
 #nav-button {
@@ -27,15 +19,43 @@ header {
   margin-top: 3px;
 }
 
-nav ul {
+#main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav ul li {
+#main-nav ul li {
   padding: 8px;
   font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #nav-button {
+    display: none;
+  }
+
+  #main-nav {
+    margin: -40px -8px 0 0;
+    height: 34px;
+  }
+
+  #main-nav ul li {
+    display: inline;
+    padding: 8px 0 8px 8px;
+  }
+}
+
+select {
+  margin: 10px 10%;
+  width: 80%;
+}
+
+@media screen and (min-width: 758px) {
+  select {
+    margin: 10px 10px 10px 0 ;
+    width: 180px;
+  }
 }
 
 article {
@@ -43,6 +63,11 @@ article {
   margin-bottom: 20px;
 }
 
-article p {
+article h3, article h4, article p {
   padding: 16px;
+  margin: 0;
+}
+
+#headshot {
+  max-width: 300px;
 }
