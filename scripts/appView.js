@@ -68,10 +68,17 @@ appView.handleResize = function() {
 };
 
 $(document).ready(function() {
+
+});
+
+appView.initIndexPage = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml());
+  });
   appView.handleMainNav();
   appView.handleNavButton();
   appView.populateFilters();
   appView.handleResize();
   appView.handleCategoryFilter();
   appView.handleYearFilter();
-});
+};
