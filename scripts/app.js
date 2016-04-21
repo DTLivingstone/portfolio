@@ -3,15 +3,9 @@
 var projects = [];
 
 function Project(opts) {
-  this.title = opts.title;
-  this.url = opts.url;
-  this.screenshot = opts.screenshot;
-  this.description = opts.description;
-  this.pubDate = opts.pubDate;
-  this.category = opts.category;
-  // for (key in opts) {
-  //   this[key] = opts[key];
-  // };
+  for (var key in opts) {
+    this[key] = opts[key];
+  };
 };
 
 Project.all = [];

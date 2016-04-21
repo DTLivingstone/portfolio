@@ -3,11 +3,16 @@
 var appView = {};
 
 appView.handleMainNav = function() {
-  $('nav').on('click', '.tab-button', function(e) {
+  $('nav').on('click', '.tab-button', function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn(100);
   });
   $('nav .tab-button:first').click();
+  if ($('#nav-button').css('display') === 'block') {
+    $('#main-nav').hide();
+  } else {
+    $('#main-nav').show();
+  }
 };
 
 appView.handleNavButton = function() {
@@ -66,10 +71,6 @@ appView.handleResize = function() {
     }
   });
 };
-
-$(document).ready(function() {
-
-});
 
 appView.initIndexPage = function() {
   Project.all.forEach(function(a) {
