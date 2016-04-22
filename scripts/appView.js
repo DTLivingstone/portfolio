@@ -73,6 +73,18 @@
     });
   };
 
+  appView.stats = function() {
+    var totalWords = Project.all.map(function(obj) {
+      return obj.description.match(/\S+/g).length;
+    })
+    .reduce(function(acc, curr) {
+      return acc + curr;
+    });
+    var projectCount = Project.all.length;
+    var avgWords = Math.round(totalWords/projectCount);
+    console.log('You\'ve written', totalWords, 'words across', projectCount, 'projects, averaging', avgWords, 'words per project.');
+  };
+
   appView.initIndexPage = function() {
     Project.all.map(function(a) {
       $('#projects').append(a.toHtml());
@@ -83,6 +95,7 @@
     appView.handleResize();
     appView.handleCategoryFilter();
     appView.handleYearFilter();
+    appView.stats();
   };
 
   module.appView = appView;
