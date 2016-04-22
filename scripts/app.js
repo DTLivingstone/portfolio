@@ -6,6 +6,8 @@
     for (var key in opts) {
       this[key] = opts[key];
     };
+
+
   };
 
   Project.all = [];
@@ -18,8 +20,8 @@
   };
 
   Project.loadAll = function(data) {
-    data.forEach(function(ele) {
-      Project.all.push(new Project(ele));
+    Project.all = data.map(function(ele) {
+      return new Project(ele);
     });
 
     data.sort(function(a,b) {

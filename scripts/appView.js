@@ -74,7 +74,7 @@
   };
 
   appView.initIndexPage = function() {
-    Project.all.forEach(function(a) {
+    Project.all.map(function(a) {
       $('#projects').append(a.toHtml());
     });
     appView.handleMainNav();
