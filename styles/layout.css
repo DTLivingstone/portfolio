@@ -3,24 +3,28 @@ header {
   font-weight: 300;
   font-size: 24px;
   height: 37px;
-  padding: 8px;
+  /*padding: 8px;*/
   background-color: #fff;
-  z-index: 2;
 }
 
+header .inner {
+  max-width: 960px;
+  position: relative;
+  margin: 0 3%;
+}
 
 main {
-  z-index: 1;
+  max-width: 960px;
+  margin: 0 3%;
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    margin: 0 40px;
+@media screen and (min-width: 960px) {
+  header .inner {
+    position: relative;
+    margin: 0 auto;
   }
-}
 
-@media screen and (min-width: 1024px) {
   main {
-    margin: 0 80px;
+    margin: 0 auto;
   }
 }
