@@ -6,17 +6,18 @@
   clear: both;
 }
 
+#logo {
+  float: left;
+}
+
 #main-nav {
   float: right;
-  padding: 0 10px;
-  margin: 5px -8px 0 0;
   background-color: #fff;
 }
 
 #nav-button {
   float: right;
   font-size: 24px;
-  margin-top: 3px;
 }
 
 #main-nav ul {
@@ -26,46 +27,60 @@
 }
 
 #main-nav ul li {
-  padding: 8px;
-  font-size: 20px;
+  font-size: 24px;
+  margin-left: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   #nav-button {
     display: none;
   }
 
   #main-nav {
-    margin: -40px -8px 0 0;
     height: 34px;
   }
 
   #main-nav ul li {
     display: inline;
-    padding: 8px 0 8px 8px;
   }
 }
 
 select {
-  margin: 10px 10%;
   width: 80%;
 }
 
-@media screen and (min-width: 758px) {
+@media screen and (min-width: 960px) {
   select {
-    margin: 10px 10px 10px 0 ;
     width: 180px;
   }
 }
 
 article {
   background-color: #d3d9df;
-  margin-bottom: 20px;
+  margin: 30px 0;
 }
 
-article h3, article h4, article p {
-  padding: 16px;
-  margin: 0;
+.project-text {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  article {
+    height: 500px;
+    margin: 30px 0;
+  }
+  article img {
+    float: left;
+    width: 470px;
+  }
+  .project-text {
+    float: right;
+    width: 470px;
+  }
+  project-text p {
+    margin: 0 auto;
+  }
 }
 
 #headshot {
