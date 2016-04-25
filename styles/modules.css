@@ -28,6 +28,7 @@
 
 #main-nav ul li {
   font-size: 24px;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 960px) {
@@ -55,23 +56,31 @@ select {
 }
 
 article {
-  width: 100%;
   background-color: #d3d9df;
+  margin: 30px 0;
+}
+
+.project-text {
+  display: block;
+  width: 100%;
 }
 
 @media screen and (min-width: 960px) {
+  article {
+    height: 500px;
+    margin: 30px 0;
+  }
   article img {
-    display: inline-block;
-    width: 425px;
+    float: left;
+    width: 470px;
   }
-  article p {
-    display: inline-block;
-    width: 425px;
+  .project-text {
+    float: right;
+    width: 470px;
   }
-}
-
-article h3, article h4, article p {
-  /*padding: 16px;*/
+  project-text p {
+    margin: 0 auto;
+  }
 }
 
 #headshot {

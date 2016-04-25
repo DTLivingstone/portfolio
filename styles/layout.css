@@ -3,27 +3,27 @@ header {
   font-weight: 300;
   font-size: 24px;
   height: 37px;
-  /*padding: 8px;*/
+  padding: 20px 10px;
   background-color: #fff;
 }
 
 header .inner {
   max-width: 960px;
   position: relative;
-  margin: 0 3%;
 }
 
 main {
   max-width: 960px;
-  margin: 0 3%;
 }
 
 @media screen and (min-width: 960px) {
+  /*header {
+
+  }*/
   header .inner {
-    position: relative;
+    margin: 20px 10px;
     margin: 0 auto;
   }
-
   main {
     margin: 0 auto;
   }
