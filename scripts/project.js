@@ -3,7 +3,7 @@
   var projects = [];
 
   function Project(opts) {
-    for (var key in opts) { // how can I use .map here?
+    for (var key in opts) {
       this[key] = opts[key];
     };
 
