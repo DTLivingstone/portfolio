@@ -1,10 +1,10 @@
 header {
+  background-color: #fff;
   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
   font-size: 24px;
+  font-weight: 300;
   height: 37px;
   padding: 20px 10px;
-  background-color: #fff;
 }
 
 header .inner {
@@ -12,19 +12,34 @@ header .inner {
   position: relative;
 }
 
-main {
-  max-width: 960px;
-}
-
 @media screen and (min-width: 960px) {
-  /*header {
-
-  }*/
   header .inner {
     margin: 20px 10px;
     margin: 0 auto;
   }
-  main {
-    margin: 0 auto;
-  }
+}
+
+.grid {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid:after {
+  content: "";
+  clear: both;
+}
+
+.col-left {
+  padding-right: 20px;
+}
+
+.col-right {
+  padding-right: 0;
+}
+
+
+[class*='col-'] {
+  float: left;
+  width: 50%;
 }

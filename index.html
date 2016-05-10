@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="bower_components/typicons.font/src/font/typicons.css"></link>
     <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500|Palanquin' rel='stylesheet' type='text/css'>
     <script id="project-template" type="text/x-handlebars-template">
-      <article class="clear" data-category="{{category}}" data-year="{{year}}">
-        <img src="{{screenshot}}"></img>
-        <div class="project-text">
+      <article data-category="{{category}}" data-year="{{year}}">
+        <img class="col-left" src="{{screenshot}}"></img>
+        <div class="col-right">
           <h3>{{title}}</h3>
           <h4>Published on {{pubDate}}, {{daysAgo}} days ago</h4>
           <p>{{description}}</p>
@@ -46,7 +46,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="grid">
       <section class="tab-content" id="projects">
         <h2>Web Development</h2>
         <div id="project-filters">
