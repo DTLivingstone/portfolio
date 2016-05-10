@@ -19,17 +19,16 @@
         </div>
       </article>
     </script>
-
     <script id="repo-template" type="text/x-handlebars-template">
         <article>
           <h2><a href="{{html_url}}">{{name}}</a></h2>
           <h3>Created on: {{created_at}}</h3>
           <p>{{description}}</p>
-          <span>Stargazers Count: {{stargazers_count}}</span>
-          <span>Watchers Count: {{watchers_count}}</span>
+          <!-- hide empty stars and watchers using JQuery -->
+          <div>Stargazers Count: {{stargazers_count}}</div>
+          <div>Watchers Count: {{watchers_count}}</div>
         </article>
     </script>
-
   </head>
   <body>
     <header>
@@ -72,13 +71,13 @@
     <script src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="bower_components/page/page.js"></script>
     <script src="scripts/githubToken.js"></script>
-    <script src="scripts/project.js"></script>
-    <script src="scripts/repo.js"></script>
-    <script src="scripts/appView.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script src="scripts/repoView.js"></script>
-    <script src="scripts/aboutController.js"></script>
-    <script src="scripts/projectController.js"></script>
+    <script src="scripts/model/project.js"></script>
+    <script src="scripts/model/repo.js"></script>
+    <script src="scripts/view/appView.js"></script>
+    <script src="scripts/view/projectView.js"></script>
+    <script src="scripts/view/repoView.js"></script>
+    <script src="scripts/controller/aboutController.js"></script>
+    <script src="scripts/controller/projectController.js"></script>
     <script src="scripts/routes.js"></script>
   </body>
 </html>
