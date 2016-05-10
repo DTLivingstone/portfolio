@@ -12,34 +12,43 @@ header .inner {
   position: relative;
 }
 
-@media screen and (min-width: 960px) {
+/*@media screen and (min-width: 960px) {
   header .inner {
     margin: 20px 10px;
     margin: 0 auto;
   }
-}
+}*/
 
 .grid {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
-
-.grid:after {
-  content: "";
-  clear: both;
-}
-
-.col-left {
-  padding-right: 20px;
-}
-
-.col-right {
-  padding-right: 0;
-}
-
 
 [class*='col-'] {
-  float: left;
-  width: 50%;
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .grid {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid:after {
+    content: "";
+    clear: both;
+  }
+
+  [class*='col-'] {
+    float: left;
+    width: 50%;
+  }
+
+  .col-left {
+    padding-right: 20px;
+  }
+
+  .col-right {
+    padding-right: 0;
+  }
 }
