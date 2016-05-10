@@ -3,7 +3,7 @@
   var repoView = {};
 
   var render = function(repo) {
-    var template = Handlebars.compile($('#github-template').text());
+    var template = Handlebars.compile($('#repo-template').text());
     return template(repo);
   };
   repoView.index = function() {
