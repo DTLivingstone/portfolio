@@ -22,7 +22,11 @@
 
     <script id="github-template" type="text/x-handlebars-template">
         <article>
-          <h3>{{id}}</h3>
+          <h2><a href="{{html_url}}">{{name}}</a></h2>
+          <h3>Created on: {{created_at}}</h3>
+          <p>{{description}}</p>
+          <span>Stargazers Count: {{stargazers_count}}</span>
+          <span>Watchers Count: {{watchers_count}}</span>
         </article>
     </script>
 
